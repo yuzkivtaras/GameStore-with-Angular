@@ -1,0 +1,107 @@
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'GameStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+      IF SERVERPROPERTY('EngineEdition') <> 5
+      BEGIN
+          ALTER DATABASE [GameStoreDb] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+      END;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+      DROP DATABASE [GameStoreDb];
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (238ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+      CREATE DATABASE [GameStoreDb];
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (57ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+      IF SERVERPROPERTY('EngineEdition') <> 5
+      BEGIN
+          ALTER DATABASE [GameStoreDb] SET READ_COMMITTED_SNAPSHOT ON;
+      END;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [Games] (
+          [Id] int NOT NULL IDENTITY,
+          [Name] nvarchar(max) NOT NULL,
+          [Alias] nvarchar(max) NOT NULL,
+          [Description] nvarchar(max) NULL,
+          CONSTRAINT [PK_Games] PRIMARY KEY ([Id])
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [Genres] (
+          [Id] int NOT NULL IDENTITY,
+          [Name] nvarchar(max) NOT NULL,
+          [Description] nvarchar(max) NULL,
+          CONSTRAINT [PK_Genres] PRIMARY KEY ([Id])
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [Platforms] (
+          [Id] int NOT NULL IDENTITY,
+          [Type] nvarchar(max) NOT NULL,
+          [Description] nvarchar(max) NULL,
+          CONSTRAINT [PK_Platforms] PRIMARY KEY ([Id])
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [GameGenre] (
+          [GamesId] int NOT NULL,
+          [GenresId] int NOT NULL,
+          CONSTRAINT [PK_GameGenre] PRIMARY KEY ([GamesId], [GenresId]),
+          CONSTRAINT [FK_GameGenre_Games_GamesId] FOREIGN KEY ([GamesId]) REFERENCES [Games] ([Id]) ON DELETE CASCADE,
+          CONSTRAINT [FK_GameGenre_Genres_GenresId] FOREIGN KEY ([GenresId]) REFERENCES [Genres] ([Id]) ON DELETE CASCADE
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [SubGenres] (
+          [Id] int NOT NULL IDENTITY,
+          [Name] nvarchar(max) NOT NULL,
+          [GenreId] int NOT NULL,
+          CONSTRAINT [PK_SubGenres] PRIMARY KEY ([Id]),
+          CONSTRAINT [FK_SubGenres_Genres_GenreId] FOREIGN KEY ([GenreId]) REFERENCES [Genres] ([Id]) ON DELETE CASCADE
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [GamePlatform] (
+          [GamesId] int NOT NULL,
+          [PlatformsId] int NOT NULL,
+          CONSTRAINT [PK_GamePlatform] PRIMARY KEY ([GamesId], [PlatformsId]),
+          CONSTRAINT [FK_GamePlatform_Games_GamesId] FOREIGN KEY ([GamesId]) REFERENCES [Games] ([Id]) ON DELETE CASCADE,
+          CONSTRAINT [FK_GamePlatform_Platforms_PlatformsId] FOREIGN KEY ([PlatformsId]) REFERENCES [Platforms] ([Id]) ON DELETE CASCADE
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX [IX_GameGenre_GenresId] ON [GameGenre] ([GenresId]);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX [IX_GamePlatform_PlatformsId] ON [GamePlatform] ([PlatformsId]);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX [IX_SubGenres_GenreId] ON [SubGenres] ([GenreId]);
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.0 initialized 'GameStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (34ms) [Parameters=[@__alias_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [g].[Id], [g].[Alias], [g].[Description], [g].[Name]
+      FROM [Games] AS [g]
+      WHERE [g].[Alias] = @__alias_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      INSERT INTO [Games] ([Alias], [Description], [Name])
+      VALUES (@p0, @p1, @p2);
+      SELECT [Id]
+      FROM [Games]
+      WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@__alias_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [g].[Id], [g].[Alias], [g].[Description], [g].[Name]
+      FROM [Games] AS [g]
+      WHERE [g].[Alias] = @__alias_0

@@ -1,0 +1,31 @@
+{
+  "Game": "Games",
+  "UpdateGame": "games/update",
+  "DeleteGame": "Game",
+  "AddGame": "Games/new",
+  "Games": "Games",
+
+  "Genres": "Genres",
+  "Genre": "Genres",
+  "AddGenre": "Genres/new",
+  "DeleteGenre": "Genre",
+  "UpdateGenre": "Genres/update",
+
+  "UpdatePlatform": "Platforms/update",
+  "DeletePlatform": "Platform",
+  "Platform": "Platforms",
+  "AddPlatform": "Platforms/new",
+  "Platforms": "Platforms",
+
+  "Publishers": "Publishers",
+  "Publisher": "Publishers",
+  "UpdatePublisher": "Publishers/update",
+  "DeletePublisher": "Publisher",
+  "AddPublisher": "Publisher/new",
+
+
+  "Order": "Orders",
+  "Orders": "Orders",
+  "Basket": "Basket",
+  "MakeOrder": "Basket/make"
+}

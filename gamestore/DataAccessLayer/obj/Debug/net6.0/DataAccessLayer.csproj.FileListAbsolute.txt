@@ -1,0 +1,14 @@
+D:\GitLabRepositories\gamestore\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.deps.json
+D:\GitLabRepositories\gamestore\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.runtimeconfig.json
+D:\GitLabRepositories\gamestore\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.dll
+D:\GitLabRepositories\gamestore\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+D:\GitLabRepositories\gamestore\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+D:\GitLabRepositories\gamestore\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitLabRepositories\gamestore\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+D:\GitLabRepositories\gamestore\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+D:\GitLabRepositories\gamestore\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\GitLabRepositories\gamestore\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.dll
+D:\GitLabRepositories\gamestore\DataAccessLayer\obj\Debug\net6.0\refint\DataAccessLayer.dll
+D:\GitLabRepositories\gamestore\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.pdb
+D:\GitLabRepositories\gamestore\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.genruntimeconfig.cache
+D:\GitLabRepositories\gamestore\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll

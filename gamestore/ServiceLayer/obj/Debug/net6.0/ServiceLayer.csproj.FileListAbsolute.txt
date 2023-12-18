@@ -1,0 +1,15 @@
+D:\GitLabRepositories\gamestore\ServiceLayer\bin\Debug\net6.0\ServiceLayer.deps.json
+D:\GitLabRepositories\gamestore\ServiceLayer\bin\Debug\net6.0\ServiceLayer.dll
+D:\GitLabRepositories\gamestore\ServiceLayer\bin\Debug\net6.0\ServiceLayer.pdb
+D:\GitLabRepositories\gamestore\ServiceLayer\bin\Debug\net6.0\DataAccessLayer.dll
+D:\GitLabRepositories\gamestore\ServiceLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+D:\GitLabRepositories\gamestore\ServiceLayer\obj\Debug\net6.0\ServiceLayer.csproj.AssemblyReference.cache
+D:\GitLabRepositories\gamestore\ServiceLayer\obj\Debug\net6.0\ServiceLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitLabRepositories\gamestore\ServiceLayer\obj\Debug\net6.0\ServiceLayer.AssemblyInfoInputs.cache
+D:\GitLabRepositories\gamestore\ServiceLayer\obj\Debug\net6.0\ServiceLayer.AssemblyInfo.cs
+D:\GitLabRepositories\gamestore\ServiceLayer\obj\Debug\net6.0\ServiceLayer.csproj.CoreCompileInputs.cache
+D:\GitLabRepositories\gamestore\ServiceLayer\obj\Debug\net6.0\ServiceLayer.csproj.CopyComplete
+D:\GitLabRepositories\gamestore\ServiceLayer\obj\Debug\net6.0\ServiceLayer.dll
+D:\GitLabRepositories\gamestore\ServiceLayer\obj\Debug\net6.0\refint\ServiceLayer.dll
+D:\GitLabRepositories\gamestore\ServiceLayer\obj\Debug\net6.0\ServiceLayer.pdb
+D:\GitLabRepositories\gamestore\ServiceLayer\obj\Debug\net6.0\ref\ServiceLayer.dll
